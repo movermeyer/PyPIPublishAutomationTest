@@ -75,9 +75,9 @@ jobs:
             pip install -U twine
 
       - save_cache:
-        key: publish-dependencies-cache
-        paths:
-          - "venv"
+          key: publish-dependencies-cache
+          paths:
+            - "venv"
 
       - run:
           name: init .pypirc
