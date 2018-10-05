@@ -14,7 +14,7 @@ workflows:
             tags:
               only: /^v?[0-9]+(\.[0-9]+)*/
             branches:
-              ignore: /.*/
+              only: /master/
 
 defaults: &defaults
   working_directory: ~/code
