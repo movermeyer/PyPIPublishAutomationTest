@@ -1,1 +1,1 @@
-from left_pad import left_pad
+from .left_pad import left_pad

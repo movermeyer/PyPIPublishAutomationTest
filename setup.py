@@ -9,6 +9,7 @@ setup(
     author_email='test@example.com',
 
     packages=['publish_test'],
+    test_suite='tests',
 
     classifiers=[],
     keywords='',
