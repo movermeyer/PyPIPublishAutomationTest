@@ -7,14 +7,14 @@ workflows:
       - test-3.7
       - lint-code
       - deploy:
-        requires:
-          - test-3.7
-          - lint-code
-        filters:
-          tags:
-            only: /[0-9]+(\.[0-9]+)*/
-          branches:
-            ignore: /.*/
+          requires:
+            - test-3.7
+            - lint-code
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
 
 defaults: &defaults
   working_directory: ~/code
