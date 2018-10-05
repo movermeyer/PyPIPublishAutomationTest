@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import os
-import sys 
+import sys
 from setuptools import setup
 from setuptools.command.install import install
 
-VERSION = '0.0.1'
+VERSION = "0.0.1"
 
 
 class VerifyVersionCommand(install):
@@ -13,7 +13,7 @@ class VerifyVersionCommand(install):
     description = 'verify that the git tag matches our version'
 
     def run(self):
-        tag = os.getenv('CIRCLE_TAG')
+        tag = os.getenv('CIRCLE_TAG').strip('v')
 
         if tag != VERSION:
             info = "Git tag: {0} does not match the version of this app: {1}".format(
